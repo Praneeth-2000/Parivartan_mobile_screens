@@ -178,7 +178,7 @@
   cursor: pointer;
   transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.3s ease;
   will-change: transform, offset-distance, opacity;
-  offset-rotate: 0deg;
+  offset-rotate: auto 180deg;
 }
 
 /* --- ABSOLUTE SYMMETRICAL PATHS --- */

@@ -558,3 +558,149 @@
   }
 }
 
+/* Ad Campaigns Section */
+.adCampaignsSection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--spacing-xl) 0;
+  margin-top: var(--spacing-lg);
+}
+
+.adCampaignsTitle {
+  font-family: 'Caveat', cursive;
+  font-size: 36px;
+  font-weight: 600;
+  color: var(--color-orange-accent);
+  text-align: center;
+  margin: 0 0 var(--spacing-md) 0;
+  letter-spacing: 0.5px;
+}
+
+.adCampaignsIllustration {
+  width: 100%;
+  max-width: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.adCampaignsIllustration svg,
+.adCampaignImg {
+  width: 100%;
+  height: auto;
+  max-width: 300px;
+}
+
+.adCampaignsCarousel {
+  width: 100%;
+  overflow: hidden;
+  padding: var(--spacing-md) 0;
+  position: relative;
+}
+
+.adCampaignsTrack {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: adScroll 20s linear infinite;
+}
+
+.adCampaignsTrack:hover {
+  animation-play-state: paused;
+}
+
+@keyframes adScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% / 3));
+  }
+}
+
+.adCampaignCard {
+  background: var(--color-card-white);
+  border-radius: 7px;
+  padding: 20px 15px;
+  width: 126px;
+  height: 163px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.10);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.adCampaignCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
+}
+
+.adCampaignIcon {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.adCampaignIcon svg,
+.adCampaignCardIcon {
+  width: 41px;
+  height: 29px;
+  object-fit: contain;
+}
+
+.adCampaignText {
+  font-family: 'Mulish', sans-serif;
+  font-size: 16px;
+  color: #7a7a7a;
+  line-height: 1.4;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* Responsive styles for Ad Campaigns */
+@media (min-width: 768px) {
+  .adCampaignsTitle {
+    font-size: 48px;
+  }
+  
+  .adCampaignsIllustration {
+    max-width: 450px;
+  }
+  
+  .adCampaignsIllustration svg {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 600px) {
+  .adCampaignsTitle {
+    font-size: clamp(24px, 7vw, 32px);
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .adCampaignImg {
+    width: 156.815px !important;
+    height: 115px !important;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 360px) {
+  .adCampaignsTitle {
+    font-size: clamp(20px, 8vw, 24px);
+  }
+}

@@ -24,6 +24,13 @@ import client4Logo from '../assets/logos/Client 4.png';
 import client5Logo from '../assets/logos/Client 5.png';
 import client7Logo from '../assets/logos/Client 7.png';
 import client8Logo from '../assets/logos/Client 8.png';
+import adCampaignImg from '../assets/images/Ad campaign.png';
+import rupeeIcon from '../assets/images/Rupee.png';
+import filterIcon from '../assets/images/Filter.png';
+import managementImg from '../assets/images/Management.png';
+import thumbIcon from '../assets/images/Thumb.png';
+import monitorIcon from '../assets/images/Monitor.png';
+import dealIcon from '../assets/images/Deal.png';
 
 // Import underline image
 import underlineStroke from '../assets/Vector76.svg';
@@ -1136,6 +1143,97 @@ const SocialConnect = () => {
         </div>
       </div>
         
+
+      {/* Ad Campaigns Section */}
+      <div className={styles.adCampaignsSection}>
+        <h2 className={styles.adCampaignsTitle}>ad campaigns</h2>
+        
+        {/* Illustration */}
+        <div className={styles.adCampaignsIllustration}>
+          <img src={adCampaignImg} alt="Ad Campaigns" className={styles.adCampaignImg} />
+        </div>
+        {/* Feature Cards Carousel */}
+        <div className={styles.adCampaignsCarousel}>
+          <div className={styles.adCampaignsTrack}>
+            {[...Array(3)].map((_, i) => (
+              <React.Fragment key={i}>
+                <div className={styles.adCampaignCard}>
+                  <div className={styles.adCampaignIcon}>
+                    <img src={groupIcon} alt="Group" className={styles.adCampaignCardIcon} />
+                  </div>
+                  <p className={styles.adCampaignText}>
+                    Reach the right audience with precisely targeted campaigns.
+                  </p>
+                </div>
+                
+                <div className={styles.adCampaignCard}>
+                  <div className={styles.adCampaignIcon}>
+                    <img src={rupeeIcon} alt="Rupee" className={styles.adCampaignCardIcon} />
+                  </div>
+                  <p className={styles.adCampaignText}>
+                    Maximize ROI through data-driven ad strategy and optimization.
+                  </p>
+                </div>
+                
+                <div className={styles.adCampaignCard}>
+                  <div className={styles.adCampaignIcon}>
+                    <img src={filterIcon} alt="Filter" className={styles.adCampaignCardIcon} />
+                  </div>
+                  <p className={styles.adCampaignText}>
+                    Generate quality leads that convert into real customers.
+                  </p>
+                </div>
+              </React.Fragment>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Online Reputation Management Section */}
+      <div className={styles.adCampaignsSection}>
+        <h2 className={styles.adCampaignsTitle}>online reputation management</h2>
+        
+        {/* Illustration */}
+        <div className={styles.adCampaignsIllustration}>
+          <img src={managementImg} alt="Management" className={styles.adCampaignImg} />
+        </div>
+        
+        {/* Feature Cards Carousel */}
+        <div className={styles.adCampaignsCarousel}>
+          <div className={styles.adCampaignsTrack}>
+            {[...Array(3)].map((_, i) => (
+              <React.Fragment key={i}>
+                <div className={styles.adCampaignCard}>
+                  <div className={styles.adCampaignIcon}>
+                    <img src={thumbIcon} alt="Thumb" className={styles.adCampaignCardIcon} />
+                  </div>
+                  <p className={styles.adCampaignText}>
+                    Build and maintain a positive brand image across digital platforms.
+                  </p>
+                </div>
+                
+                <div className={styles.adCampaignCard}>
+                  <div className={styles.adCampaignIcon}>
+                    <img src={monitorIcon} alt="Monitor" className={styles.adCampaignCardIcon} />
+                  </div>
+                  <p className={styles.adCampaignText}>
+                    Monitor reviews and feedback to protect your online reputation.
+                  </p>
+                </div>
+                
+                <div className={styles.adCampaignCard}>
+                  <div className={styles.adCampaignIcon}>
+                    <img src={dealIcon} alt="Deal" className={styles.adCampaignCardIcon} />
+                  </div>
+                  <p className={styles.adCampaignText}>
+                    Increase trust with authentic engagement and timely responses.
+                  </p>
+                </div>
+              </React.Fragment>
+            ))}
+          </div>
+        </div>
+      </div>
 
       {/* Unified Footer Section */}
       <footer className={styles.footer}>

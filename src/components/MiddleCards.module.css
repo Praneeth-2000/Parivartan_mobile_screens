@@ -53,8 +53,8 @@
 .carouselContainer {
   width: 100%;
   flex: 1;
-  min-height: 180px;
-  max-height: 350px;
+  min-height: 250px;
+  max-height: 600px;
   position: relative;
   overflow: hidden;
   mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
@@ -66,7 +66,7 @@
   width: 1200px;
   height: 100%;
   left: 50%;
-  top: 30px;
+  top: 20px;
   transform: translateX(-50%);
   perspective: 1000px;
 }
@@ -88,13 +88,13 @@
 }
 
 .topCard {
-  offset-path: path("M 1100 200 C 900 40, 300 40, 100 200");
+  offset-path: path("M 900 320 C 800 50, 400 50, 300 320");
   animation: slideTop 25s linear infinite;
   animation-delay: calc(25s / var(--total) * var(--index) * -1);
 }
 
 .bottomCard {
-  offset-path: path("M 1100 300 C 900 160, 300 160, 100 300");
+  offset-path: path("M 900 460 C 800 190, 400 190, 300 460");
   animation: slideBottom 20s linear infinite;
   animation-delay: calc(20s / var(--total) * var(--index) * -1);
 }
@@ -230,7 +230,7 @@
 
 @media (min-width: 768px) {
   .carouselContainer {
-    height: 400px;
+    height: 600px;
   }
   
   .carouselTrack {
@@ -243,11 +243,11 @@
   }
   
   .topCard {
-    offset-path: path("M 1600 250 C 1300 50, 500 50, 200 250");
+    offset-path: path("M 1400 320 C 1200 50, 600 50, 400 320");
   }
   
   .bottomCard {
-    offset-path: path("M 1600 380 C 1300 200, 500 200, 200 380");
+    offset-path: path("M 1400 460 C 1200 190, 600 190, 400 460");
   }
   
   .illustration {

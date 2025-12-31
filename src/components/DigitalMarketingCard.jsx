@@ -13,7 +13,6 @@ import client8Logo from '../assets/logos/Client 8.png';
 export const DigitalMarketingCard = () => {
   const topLogos = [
     { id: 't1', name: 'Client 1', logo: client1Logo },
-    { id: 't2', name: 'Client 2', logo: null },
     { id: 't3', name: 'Client 3', logo: client3Logo },
     { id: 't4', name: 'Client 4', logo: client4Logo },
     { id: 't5', name: 'Client 5', logo: client5Logo },
@@ -22,7 +21,6 @@ export const DigitalMarketingCard = () => {
   const bottomLogos = [
     { id: 'b1', name: 'Client 7', logo: client7Logo },
     { id: 'b2', name: 'Client 8', logo: client8Logo },
-    { id: 'b3', name: 'Client 9', logo: null },
   ];
 
   // Adjust density to be between 1x and 2x to avoid overlap but minimize gap

@@ -8,6 +8,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
+  height: 100dvh; /* Dynamic viewport height for mobile browsers */
   display: flex;
   flex-direction: column;
   background-image: url('../assets/images/CardBG.png');
@@ -22,7 +23,7 @@
   flex-shrink: 0;
   padding: 30px 20px 15px;
   text-align: center;
-  background: linear-gradient(180deg, rgba(247, 253, 250, 0.95) 0%, rgba(247, 253, 250, 0.8) 100%);
+  background: transparent;
   z-index: 10;
 }
 
@@ -69,9 +70,10 @@
   margin: 0 auto;
 }
 
-/* SWIPEABLE MIDDLE AREA */
+/* SWIPEABLE MIDDLE AREA - fills remaining space */
 .swipeArea {
   flex: 1;
+  min-height: 0; /* Important for flex children to shrink properly */
   position: relative;
   overflow: hidden;
   touch-action: pan-x;
@@ -153,7 +155,7 @@
   flex-shrink: 0;
   padding: 15px 20px 25px;
   text-align: center;
-  background: linear-gradient(0deg, rgba(247, 253, 250, 0.95) 0%, rgba(247, 253, 250, 0.8) 100%);
+  background: transparent;
   z-index: 10;
 }
 

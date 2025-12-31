@@ -81,15 +81,17 @@ const SwipeableLayout = ({ children }) => {
     }
   }, [currentIndex, isTransitioning]);
   
-  const handleTouchStart = (e) => {
+  const handleTouchStart = useCallback((e) => {
+    e.preventDefault();
     touchStartY.current = e.touches[0].clientY;
-  };
+  }, []);
   
-  const handleTouchMove = (e) => {
+  const handleTouchMove = useCallback((e) => {
+    e.preventDefault();
     touchEndY.current = e.touches[0].clientY;
-  };
+  }, []);
   
-  const handleTouchEnd = () => {
+  const handleTouchEnd = useCallback(() => {
     const swipeDistance = touchStartY.current - touchEndY.current;
     if (Math.abs(swipeDistance) > minSwipeDistance) {
       if (swipeDistance > 0) {
@@ -100,7 +102,7 @@ const SwipeableLayout = ({ children }) => {
     }
     touchStartY.current = 0;
     touchEndY.current = 0;
-  };
+  }, [goToNext, goToPrev]);
   
   const handleWheel = useCallback((e) => {
     if (isTransitioning) return;
@@ -115,10 +117,20 @@ const SwipeableLayout = ({ children }) => {
   useEffect(() => {
     const container = containerRef.current;
     if (container) {
+      // Add event listeners with passive: false to allow preventDefault
       container.addEventListener('wheel', handleWheel, { passive: false });
-      return () => container.removeEventListener('wheel', handleWheel);
+      container.addEventListener('touchstart', handleTouchStart, { passive: false });
+      container.addEventListener('touchmove', handleTouchMove, { passive: false });
+      container.addEventListener('touchend', handleTouchEnd, { passive: false });
+      
+      return () => {
+        container.removeEventListener('wheel', handleWheel);
+        container.removeEventListener('touchstart', handleTouchStart);
+        container.removeEventListener('touchmove', handleTouchMove);
+        container.removeEventListener('touchend', handleTouchEnd);
+      };
     }
-  }, [handleWheel]);
+  }, [handleWheel, handleTouchStart, handleTouchMove, handleTouchEnd]);
 
   return (
     <div className={styles.pageContainer}>
@@ -141,9 +153,6 @@ const SwipeableLayout = ({ children }) => {
       <div 
         className={styles.swipeArea}
         ref={containerRef}
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onTouchEnd={handleTouchEnd}
       >
         <div className={styles.cardsWrapper}>
           {childrenArray.map((child, index) => {

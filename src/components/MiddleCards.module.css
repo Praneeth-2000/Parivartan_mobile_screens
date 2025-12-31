@@ -85,16 +85,18 @@
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   offset-rotate: 0deg;
+  offset-anchor: 50% 100%;
 }
 
 .topCard {
-  offset-path: path("M 900 320 C 800 50, 400 50, 300 320");
+  offset-path: path("M 1000 320 Q 600 50 200 320");
+  offset-distance: var(--offset-pos);
 }
 
 .bottomCard {
-  offset-path: path("M 900 460 C 800 190, 400 190, 300 460");
+  offset-path: path("M 1000 500 Q 600 230 200 500");
+  offset-distance: var(--offset-pos);
 }
-
 
 
 
@@ -227,11 +229,11 @@
   }
   
   .topCard {
-    offset-path: path("M 1400 320 C 1200 50, 600 50, 400 320");
+    offset-path: path("M 1400 320 Q 800 50 200 320");
   }
   
   .bottomCard {
-    offset-path: path("M 1400 460 C 1200 190, 600 190, 400 460");
+    offset-path: path("M 1400 500 Q 800 230 200 500");
   }
   
   .illustration {

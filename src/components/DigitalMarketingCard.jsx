@@ -62,30 +62,30 @@ export const DigitalMarketingCard = () => {
     if (rawPos < 0) rawPos += 100;
 
     // Calculate scale and opacity to mimic the previous CSS animation
-    // 0% -> scale 0.7, opacity 0
+    // 0% -> scale 0.85, opacity 0.6
     // 50% -> scale 1.1, opacity 1
-    // 100% -> scale 0.7, opacity 0
+    // 100% -> scale 0.85, opacity 0.6
 
-    let scale = 0.7;
+    let scale = 0.85;
     if (rawPos <= 50) {
-      scale = 0.7 + (0.4 * (rawPos / 50));
+      scale = 0.85 + (0.25 * (rawPos / 50));
     } else {
-      scale = 1.1 - (0.4 * ((rawPos - 50) / 50));
+      scale = 1.1 - (0.25 * ((rawPos - 50) / 50));
     }
 
-    let opacity = 0;
+    let opacity = 0.6;
     if (rawPos < 15) {
-      opacity = (rawPos / 15) * 0.5;
+      opacity = 0.6 + (rawPos / 15) * 0.2; // 0.6 -> 0.8
     } else if (rawPos < 50) {
-      opacity = 0.5 + 0.5 * ((rawPos - 15) / 35);
+      opacity = 0.8 + 0.2 * ((rawPos - 15) / 35); // 0.8 -> 1.0
     } else if (rawPos < 85) {
-      opacity = 1 - 0.5 * ((rawPos - 50) / 35);
+      opacity = 1 - 0.2 * ((rawPos - 50) / 35); // 1.0 -> 0.8
     } else {
-      opacity = 0.5 * ((100 - rawPos) / 15);
+      opacity = 0.8 - 0.2 * ((100 - rawPos) / 15); // 0.8 -> 0.6
     }
 
     return {
-      offsetDistance: `${rawPos}%`,
+      '--offset-pos': `${rawPos}%`,
       opacity: opacity,
       transform: `scale(${scale})`,
       zIndex: Math.round(opacity * 100),

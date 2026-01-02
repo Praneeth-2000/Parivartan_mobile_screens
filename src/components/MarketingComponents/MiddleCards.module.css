@@ -52,9 +52,11 @@
 .carouselContainer {
   width: 100%;
   flex: 1;
-  min-height: 350px; /* Increased min-height to fit the deep arc */
+  min-height: 350px;
   position: relative;
-  overflow: visible; /* Changed to visible to prevent clipping of rotated cards and shadows */
+  overflow-x: hidden; /* Trap the 1200px track */
+  overflow-y: visible;
+  padding: 0 10px;
   mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
   -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
 }

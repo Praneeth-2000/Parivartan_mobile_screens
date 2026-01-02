@@ -4,6 +4,7 @@ import { DigitalMarketingCard } from './components/MarketingComponents/DigitalMa
 import { SeoCard } from './components/MarketingComponents/SeoCard';
 import { AdCampaignsCard } from './components/MarketingComponents/AdCampaignsCard';
 import { ReputationCard } from './components/MarketingComponents/ReputationCard';
+import { WhyChooseUs } from './components/WhyChooseUs/WhyChooseUs';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <AdCampaignsCard />
         <ReputationCard />
       </SwipeableLayout>
+      <WhyChooseUs />
     </div>
   );
 }

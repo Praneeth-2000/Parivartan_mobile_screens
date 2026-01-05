@@ -24,7 +24,7 @@
 .heading {
   font-family: 'Caveat', cursive;
   font-weight: 500;
-  font-size: clamp(42px, 12vw, 56px);
+  font-size: clamp(32px, 10vw, 56px);
   color: #1a1a1a;
   margin: 0;
   line-height: 1;

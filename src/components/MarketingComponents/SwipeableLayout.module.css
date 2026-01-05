@@ -38,7 +38,7 @@
 .heading {
   font-family: 'Caveat', cursive;
   font-weight: 500;
-  font-size: clamp(20px, 7vw, 36px); /* Scaled down */
+  font-size: clamp(32px, 10vw, 48px); /* Scaled for 380px ref */
   font-style: italic;
   line-height: 1.0;
   color: #000;
@@ -60,8 +60,8 @@
 .underlineImage {
   position: absolute;
   bottom: -20px;
-  left: -15%;
-  width: 80%;
+  left: -5%;
+  width: 75%;
   height: 26px;
   z-index: -1;
   pointer-events: none;

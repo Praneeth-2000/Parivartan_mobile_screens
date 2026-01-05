@@ -20,7 +20,7 @@
 
 .services-title {
     font-family: 'Caveat', cursive; /* Replaced var(--font-hand) */
-    font-size: 34px;
+    font-size: clamp(32px, 10vw, 48px);
     font-weight: 500;
     line-height: 1.1;
     color: #000;

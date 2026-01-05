@@ -17,7 +17,7 @@
     color: #000;
     text-align: center;
     font-family: 'Caveat', cursive; /* Replaced var(--font-hand) */
-    font-size: clamp(28px, 8vw, 36px);
+    font-size: clamp(32px, 10vw, 48px);
     font-style: normal;
     font-weight: 500;
     line-height: normal;

@@ -10,8 +10,8 @@
 }
 
 .bottomNav {
-    width: 95%;
-    max-width: 400px;
+    width: calc(100% - 30px);
+    max-width: 420px;
     height: 68px;
     border-radius: 34px;
     border: 1px solid rgba(56, 136, 7, 0.20);

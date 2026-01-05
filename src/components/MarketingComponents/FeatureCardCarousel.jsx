@@ -8,7 +8,7 @@ const FeatureCardCarousel = ({ features }) => {
   return (
     <div className={styles.featureCarousel}>
       <div className={styles.featureTrack}>
-        {[...features, ...features].map((feature, index) => (
+        {[...features, ...features, ...features, ...features].map((feature, index) => (
           <div key={index} className={styles.featureCard}>
             <div className={styles.featureIcon}>
               <img src={feature.icon} alt="" />

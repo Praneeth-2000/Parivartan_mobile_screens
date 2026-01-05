@@ -40,15 +40,17 @@
     position: relative;
     display: inline-block;
     white-space: nowrap;
+    z-index: 1;
 }
 
 
 .underline-svg {
     position: absolute;
-    bottom: -5px;
-    left: 0;
+    bottom: -22px;
+    left: -35px;
     width: 100%;
-    height: 20px;
+    height: 30px;
+    z-index: -1;
     pointer-events: none;
 }
 

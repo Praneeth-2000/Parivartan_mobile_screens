@@ -1,5 +1,6 @@
 import React from 'react';
 import './HeroSection.css';
+import underlineStroke from '../../assets/Vector76.svg';
 
 const HeroSection = () => {
     return (
@@ -8,9 +9,7 @@ const HeroSection = () => {
                 <h1 className="hero-title">
                     <span className="title-line-1">
                         website design <span className="normal-text">that</span>
-                        <svg className="underline-svg" viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5,15 Q80,5 195,12" fill="none" stroke="#5ca32a" strokeWidth="3" strokeLinecap="round" />
-                        </svg>
+                        <img src={underlineStroke} alt="" className="underline-svg" />
                     </span>
                     <span className="title-line-2">inspires change</span>
                 </h1>

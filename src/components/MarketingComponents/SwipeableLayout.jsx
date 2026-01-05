@@ -112,8 +112,10 @@ const SwipeableLayout = ({ children }) => {
       <header className={styles.fixedHeader}>
         <div className={styles.headingBlock}>
           <h1 className={styles.heading}>
-            <span className={styles.line1}>get socially connected like</span>
-            <img src={underlineStroke} alt="" className={styles.underlineImage} />
+            <span className={styles.line1}>
+              get socially connected like
+              <img src={underlineStroke} alt="" className={styles.underlineImage} />
+            </span>
             <span className={styles.line2}>never before</span>
           </h1>
         </div>

@@ -158,8 +158,8 @@
 
 .featureTrack {
   display: flex;
-  gap: 10px;
-  animation: featureScroll 18s linear infinite;
+  /* gap: 10px; Removed for seamless math */
+  animation: featureScroll 36s linear infinite;
   width: max-content;
   overflow: visible; /* Critical for shadow bleeding */
 }
@@ -178,6 +178,7 @@
   background: #fff;
   border-radius: 12px;
   padding: clamp(8px, 1.5vh, 15px);
+  margin-right: 10px; /* Added to replace flex gap */
   width: clamp(140px, 22vw, 180px);
   min-height: 0; /* No fixed minimum */
   height: clamp(120px, 22vh, 180px); /* Strictly dynamic height range */

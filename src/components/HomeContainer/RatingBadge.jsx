@@ -1,6 +1,6 @@
 import React from 'react';
 import './RatingBadge.css';
-import cornerAccent from '../../assets/images/corner-accent.jpg';
+import cornerAccent from '../../assets/images/corner-accent.svg';
 
 const RatingBadge = () => {
     return (

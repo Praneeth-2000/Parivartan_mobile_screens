@@ -105,12 +105,12 @@
 }
 
 .topCard {
-  offset-path: path("M 1200 180 Q 600 70 0 180"); /* Compressed: peak 70, ends 180 (span 20-230) */
+  offset-path: path("M 1200 150 Q 600 30 0 150"); /* Further tightened */
   offset-distance: var(--offset-pos);
 }
 
 .bottomCard {
-  offset-path: path("M 1200 360 Q 600 250 0 360"); /* Compressed: peak 250, ends 360 (span 200-410) */
+  offset-path: path("M 1200 290 Q 600 170 0 290"); /* Further tightened */
   offset-distance: var(--offset-pos);
 }
 

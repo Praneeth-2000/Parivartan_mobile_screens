@@ -35,7 +35,7 @@ const Testimonials = () => {
         <h2 className={styles.heading}>
           testimonials
           <svg className={styles.underlineSvg} width="220" height="30" viewBox="0 0 220 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M5 20C70 5 150 5 215 20" stroke="#83C341" strokeWidth="6" strokeLinecap="round"/>
+            <path d="M5 20C70 5 150 5 215 20" stroke="#83C341" strokeWidth="3" strokeLinecap="round"/>
           </svg>
         </h2>
       </div>

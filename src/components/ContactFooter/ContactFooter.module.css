@@ -35,7 +35,7 @@
 
 .underlineSvg {
   position: absolute;
-  bottom: -25px;
+  bottom: -32px;
   left: 50%;
   transform: translateX(-50%);
   width: 140%;
@@ -48,7 +48,7 @@
   font-family: 'Caveat', cursive;
   font-size: 24px;
   color: #1a1a1a;
-  margin: 15px 0 5px;
+  margin: 15px 0 15px;
   font-weight: 500;
 }
 
@@ -123,10 +123,10 @@
 }
 
 .submitBtn {
-  background-color: #6fb633;
+  background: linear-gradient(180deg, #73BF44 0%, #388807 100%);
   color: #ffffff;
   border: none;
-  border-radius: 50px;
+  border-radius: 24.5px;
   padding: 15px 40px;
   font-family: 'Inter', sans-serif;
   font-size: 18px;
@@ -135,12 +135,12 @@
   align-self: center;
   width: 100%;
   max-width: 300px;
-  transition: transform 0.2s ease, background-color 0.2s ease;
+  transition: transform 0.2s ease, opacity 0.2s ease;
   margin-top: 20px;
 }
 
 .submitBtn:hover {
-  background-color: #5da02a;
+  opacity: 0.9;
   transform: translateY(-2px);
 }
 
@@ -169,11 +169,13 @@
 
 .footer {
   background-color: #f9f9f9;
-  padding: 40px 20px;
+  padding: 40px 20px 60px;
+  padding-bottom: max(60px, env(safe-area-inset-bottom));
   text-align: center;
   display: flex;
   flex-direction: column;
   gap: 15px;
+  width: 100%;
 }
 
 .copyright, .designBy {

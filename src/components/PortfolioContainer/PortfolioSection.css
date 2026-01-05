@@ -91,7 +91,9 @@
 .nav-arrows {
     display: flex;
     align-items: center;
-    gap: 15px;
+    justify-content: space-between; /* Push buttons to edges */
+    width: 100%;
+    max-width: 320px; /* Match laptop frame width */
     margin-top: 15px;
 }
 

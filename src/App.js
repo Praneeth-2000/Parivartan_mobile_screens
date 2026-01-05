@@ -1,11 +1,7 @@
 import './App.css';
 import HomeContainer from './components/HomeContainer/HomeContainer';
 import PortfolioContainer from './components/PortfolioContainer/PortfolioContainer';
-import SwipeableLayout from './components/MarketingComponents/SwipeableLayout';
-import { DigitalMarketingCard } from './components/MarketingComponents/DigitalMarketingCard';
-import { SeoCard } from './components/MarketingComponents/SeoCard';
-import { AdCampaignsCard } from './components/MarketingComponents/AdCampaignsCard';
-import { ReputationCard } from './components/MarketingComponents/ReputationCard';
+import ServicesShowcase from './components/PortfolioContainer/ServicesShowcase';
 import { WhyChooseUs } from './components/WhyChooseUs/WhyChooseUs';
 import { FAQ } from './components/FAQ/FAQ';
 import Testimonials from './components/Testimonials/Testimonials';
@@ -17,12 +13,7 @@ function App() {
     <div className="App">
       <HomeContainer />
       <PortfolioContainer />
-      <SwipeableLayout>
-        <DigitalMarketingCard />
-        <SeoCard />
-        <AdCampaignsCard />
-        <ReputationCard />
-      </SwipeableLayout>
+      <ServicesShowcase />
       <WhyChooseUs />
       <FAQ />
       <Testimonials />

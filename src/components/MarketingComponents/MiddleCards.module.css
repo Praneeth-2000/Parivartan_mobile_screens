@@ -177,31 +177,35 @@
   flex-shrink: 0;
   background: #fff;
   border-radius: 12px;
-  padding: clamp(8px, 1.5vh, 15px);
-  margin-right: 10px; /* Added to replace flex gap */
+  padding: clamp(15px, 2vh, 20px);
+  margin-right: 15px; /* Standard margin */
   width: clamp(140px, 22vw, 180px);
-  min-height: 0; /* No fixed minimum */
-  height: clamp(120px, 22vh, 180px); /* Strictly dynamic height range */
+  height: clamp(120px, 22vh, 180px);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 5px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  gap: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  border: 1px solid rgba(0,0,0,0.03); /* Subtle border for definition */
 }
 
+/* Tape pseudo-elements removed */
+
 .featureCard:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
 }
 
 .featureIcon {
-  width: 36px;
-  height: 36px;
+  width: 45px;
+  height: 45px;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 8px;
 }
 
 .featureIcon img {
@@ -211,12 +215,13 @@
 }
 
 .featureText {
-  font-family: 'Mulish', sans-serif;
-  font-size: 11px;
-  color: #666;
+  font-family: 'Mulish', sans-serif; /* Clean sans-serif */
+  font-size: 13px;
+  color: #4a4a4a;
   text-align: center;
-  line-height: 1.4;
+  line-height: 1.5;
   margin: 0;
+  font-weight: 500;
 }
 
 /* Responsive adjustments */

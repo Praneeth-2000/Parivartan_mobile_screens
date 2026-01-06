@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './PortfolioSection.css';
-import portfolioScreen from '../../assets/images/portfolio-screen.png';
+import mobileMockup from '../../assets/images/Mobile.png';
+import mobileScrollImage from '../../assets/images/MobileImage.png';
 import accel1Logo from '../../assets/images/accel1-logo.png';
 import TestimonialPopup from './TestimonialPopup';
 import html5Logo from '../../assets/images/html5-logo.png';
@@ -16,14 +17,12 @@ const PortfolioSection = () => {
                 We craft responsive, SEO-optimized websites that empower business transform their online presence.
             </p>
 
-            <div className="laptop-showcase" onClick={() => setIsPopupOpen(true)} style={{ cursor: 'pointer' }}>
-                <div className="laptop-frame">
-                    <div className="laptop-screen">
-                        <div className="screen-content">
-                            <img src={portfolioScreen} alt="Project Screen" className="screen-image" />
-                        </div>
+            <div className="mobile-showcase-wrapper" onClick={() => setIsPopupOpen(true)} style={{ cursor: 'pointer' }}>
+                <div className="mobile-device-frame">
+                    <img src={mobileMockup} alt="Mobile Frame" className="mobile-frame-img" />
+                    <div className="mobile-screen-content">
+                        <img src={mobileScrollImage} alt="Project Screen" className="mobile-scroll-image" />
                     </div>
-                    <div className="laptop-base"></div>
                 </div>
 
                 <div className="nav-arrows">

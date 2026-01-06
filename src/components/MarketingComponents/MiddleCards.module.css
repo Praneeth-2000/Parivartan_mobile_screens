@@ -149,14 +149,18 @@
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
-  overflow: visible; /* Prevent shadow clipping */
-  padding: 30px 0; /* Increased vertical padding for shadow clearance */
-  height: 38vh; /* Slightly increased budget for shadow clearance */
+  overflow-x: auto; /* Enable manual scroll */
+  overflow-y: visible;
+  padding: 30px 20px; /* Side padding for scroll start/end */
+  height: auto;
+  min-height: 42vh;
   display: flex;
-  justify-content: center;
+  justify-content: center; /* Default, controlled by track margin */
   align-items: center;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch; /* Smooth iOS scroll */
+  scroll-snap-type: x mandatory; /* Snap effect */
 }
 
 .featureCarousel::-webkit-scrollbar {
@@ -165,23 +169,19 @@
 
 .featureTrack {
   display: flex;
-  /* gap: 10px; Removed for seamless math */
-  animation: featureScroll 36s linear infinite;
   width: max-content;
-  overflow: visible; /* Critical for shadow bleeding */
+  overflow: visible;
+  margin: 0 auto; /* Center items if they fit, safe scroll if they don't */
+  /* Animation removed for manual scroll */
 }
 
-.featureTrack:hover {
-  animation-play-state: paused;
-}
+/* .featureTrack:hover removed */
 
-@keyframes featureScroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
+/* @keyframes featureScroll removed */
 
 .featureCard {
   flex-shrink: 0;
+  scroll-snap-align: center; /* Snap to center */
   background: #fff;
   border-radius: 12px;
   padding: clamp(15px, 2vh, 20px);
@@ -198,7 +198,6 @@
   position: relative;
   border: 1px solid rgba(0,0,0,0.03); /* Subtle border for definition */
 }
-
 /* Tape pseudo-elements removed */
 
 .featureCard:hover {
